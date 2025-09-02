@@ -1,0 +1,17 @@
+/* Filament Admin Custom Theme: Zambian Military Colors */
+:root {
+  --filament-primary-50: #e6f2e6;
+  --filament-primary-100: #cce6cc;
+  --filament-primary-200: #99cc99;
+  --filament-primary-300: #669966;
+  --filament-primary-400: #336633;
+  --filament-primary-500: #215732; /* Deep green */
+  --filament-primary-600: #1a4726;
+  --filament-primary-700: #14361a;
+  --filament-primary-800: #0d250d;
+  --filament-primary-900: #061306;
+
+  --filament-accent-500: #ffd700; /* Gold */
+  --filament-danger-500: #d32f2f; /* Red */
+  --filament-neutral-900: #222;   /* Black */
+}

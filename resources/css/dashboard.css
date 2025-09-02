@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for SPEAR LMS public dashboard */
+.dashboard-bg {
+    background: linear-gradient(135deg, #1a3c1a 0%, #3a5a40 100%);
+}
+.dashboard-card {
+    @apply bg-white rounded-xl shadow p-6 flex flex-col items-center;
+}
+.dashboard-title {
+    @apply text-3xl font-bold text-primary-900 mb-4;
+}
+.dashboard-stat {
+    @apply text-lg font-semibold text-primary-700;
+}
+.dashboard-value {
+    @apply text-4xl font-bold text-primary-900 mt-2;
+}
