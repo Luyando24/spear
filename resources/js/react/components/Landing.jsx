@@ -4,6 +4,46 @@ import '../../../css/app.css';
 
 // Define styles directly to test styling
 const styles = {
+    // Footer styles
+    footer: {
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        padding: '3rem 1.5rem',
+        marginTop: '2rem'
+    },
+    footerContent: {
+        maxWidth: '80rem',
+        margin: '0 auto',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
+        gap: '1rem'
+    },
+    footerLogo: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.5rem',
+        marginBottom: '1rem'
+    },
+    footerLinks: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: '1.5rem',
+        marginBottom: '1.5rem'
+    },
+    footerLink: {
+        color: 'white',
+        textDecoration: 'none',
+        transition: 'color 0.2s',
+        ':hover': {
+            color: '#93c5fd'
+        }
+    },
+    copyright: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        fontSize: '0.875rem'
+    },
     // Features section styles
     featuresSection: {
         maxWidth: '80rem',
@@ -213,40 +253,61 @@ const Landing = () => {
             </div>
 
             {/* Features Section */}
-            <div id="features" className="bg-white text-spear-navy-900 py-20">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Key Features</h2>
+            <div id="features" style={styles.featuresSection}>
+                <h2 style={styles.sectionTitle}>Key Features</h2>
+                <div style={styles.featuresGrid}>
+                    {/* Feature 1 */}
+                    <div style={styles.featureCard}>
+                        <div style={styles.featureIcon}>
+                            📚
+                        </div>
+                        <h3 style={styles.featureTitle}>Comprehensive Courses</h3>
+                        <p style={styles.featureDescription}>Access a wide range of courses designed for professional development and skill enhancement.</p>
+                    </div>
                     
-                    <div className="grid md:grid-cols-3 gap-10">
-                        <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">Comprehensive Courses</h3>
-                            <p className="text-gray-600">Access a wide range of structured learning materials designed for professional development.</p>
+                    {/* Feature 2 */}
+                    <div style={styles.featureCard}>
+                        <div style={styles.featureIcon}>
+                            📊
                         </div>
-                        
-                        <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">Progress Tracking</h3>
-                            <p className="text-gray-600">Monitor learning progress with detailed analytics and performance metrics.</p>
+                        <h3 style={styles.featureTitle}>Progress Tracking</h3>
+                        <p style={styles.featureDescription}>Monitor learning progress with detailed analytics and performance metrics.</p>
+                    </div>
+                    
+                    {/* Feature 3 */}
+                    <div style={styles.featureCard}>
+                        <div style={styles.featureIcon}>
+                            🔒
                         </div>
-                        
-                        <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">Offline Learning</h3>
-                            <p className="text-gray-600">Access course materials even without internet connection with our offline capabilities.</p>
+                        <h3 style={styles.featureTitle}>Secure Environment</h3>
+                        <p style={styles.featureDescription}>Enterprise-grade security ensuring your data and learning materials remain protected.</p>
+                    </div>
+                    
+                    {/* Feature 4 */}
+                    <div style={styles.featureCard}>
+                        <div style={styles.featureIcon}>
+                            📱
                         </div>
+                        <h3 style={styles.featureTitle}>Mobile Compatibility</h3>
+                        <p style={styles.featureDescription}>Access your courses and materials on any device, anywhere, anytime.</p>
+                    </div>
+                    
+                    {/* Feature 5 */}
+                    <div style={styles.featureCard}>
+                        <div style={styles.featureIcon}>
+                            🏆
+                        </div>
+                        <h3 style={styles.featureTitle}>Certification</h3>
+                        <p style={styles.featureDescription}>Earn certificates upon course completion to validate your skills and knowledge.</p>
+                    </div>
+                    
+                    {/* Feature 6 */}
+                    <div style={styles.featureCard}>
+                        <div style={styles.featureIcon}>
+                            👥
+                        </div>
+                        <h3 style={styles.featureTitle}>Collaborative Learning</h3>
+                        <p style={styles.featureDescription}>Engage with peers and instructors through discussion forums and group activities.</p>
                     </div>
                 </div>
             </div>
@@ -322,21 +383,23 @@ const Landing = () => {
             </div>
 
             {/* Footer */}
-            <footer className="bg-spear-navy-900 text-white py-8">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
-                        <div className="mb-4 md:mb-0">
-                            <div className="flex items-center space-x-2">
-                                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                                    <span className="text-spear-navy-800 font-bold text-sm">S</span>
-                                </div>
-                                <span className="font-bold">SPEAR LMS</span>
-                            </div>
+            <footer style={styles.footer}>
+                <div style={styles.footerContent}>
+                    <div style={styles.footerLogo}>
+                        <div style={styles.logo}>
+                            <span style={styles.logoText}>S</span>
                         </div>
-                        <div className="text-sm text-gray-400">
-                            &copy; {new Date().getFullYear()} SPEAR LMS. All rights reserved.
-                        </div>
+                        <span style={styles.brandName}>SPEAR LMS</span>
                     </div>
+                    <div style={styles.footerLinks}>
+                        <a href="#" style={styles.footerLink}>Home</a>
+                        <a href="#features" style={styles.footerLink}>Features</a>
+                        <a href="#" style={styles.footerLink}>About</a>
+                        <a href="#" style={styles.footerLink}>Contact</a>
+                        <a href="#" style={styles.footerLink}>Privacy Policy</a>
+                        <a href="#" style={styles.footerLink}>Terms of Service</a>
+                    </div>
+                    <p style={styles.copyright}>© {new Date().getFullYear()} SPEAR LMS. All rights reserved.</p>
                 </div>
             </footer>
         </div>
